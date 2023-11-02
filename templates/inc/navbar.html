@@ -9,13 +9,13 @@
     <ul class="menu__box">
       <li><a class="menu__item" href="{% url 'home:home' %}">صفحه آغازین</a></li>
       {% if request.user.is_authenticated %}
-      <a class="nav-link active" href="{% url 'accounts:user_logout' %}">Logout</a>
+      <a class="nav-link active" href="{% url 'accounts:user_logout' %}">خروج</a>
          {% else %}
           <li><a class="menu__item" href="{% url 'accounts:user_login' %}">ورد به پنل</a></li>
           <li><a class="menu__item" href="{% url 'accounts:user_register' %}">عضویت</a></li>
        {% endif %}
     {% if request.user.is_admin %}
-         <a class="nav-link active" href="{% url 'home:bucket' %}">Bucket</a>
+         <a class="nav-link active" href="{% url 'home:bucket' %}">سبد سفارشات</a>
             {% endif %}
     <a class="nav-link active" href="{% url 'orders:cart' %}"> سبد خرید {{ cart|length }}</a>
     <li><a class="menu__item" href="#">درباره ما</a></li>
