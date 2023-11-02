@@ -1,18 +1,10 @@
 {% extends 'base.html' %}
-{% load static %}
-{% csrf_token %}
 
 {% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
 
-
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title>Login Page</title>
-</head>
-<body>
+    <body>
 	<!-- Main Content -->
 	<div class="container-fluid">
 		<div class="row main-content bg-success text-center">
@@ -27,12 +19,11 @@
 					</div>
 					<div class="row">
 						<form control="" class="form-group">
-							<div class="row">
-								<input type="text" name="username" id="username" class="form__input" placeholder="شماره موبایل">
+							<div class="row" >
+								{{ form.phone }}
 							</div>
 							<div class="row">
-								<!-- <span class="fa fa-lock"></span> -->
-								<input type="password" name="password" id="password" class="form__input" placeholder="گذرواژه">
+								{{ form.password }}
 							</div>
 							<div class="row">
 								<input type="submit" value="تایید" class="btn">
@@ -48,4 +39,7 @@
 	</div>
 
 </body>
+
+
+    </form>
 {% endblock %}

@@ -61,5 +61,11 @@ class VerifyCodeForm(forms.Form):
 
 
 class UserLoginForm(forms.Form):
-	phone = forms.CharField()
-	password = forms.CharField(widget=forms.PasswordInput)
+	phone = forms.CharField(widget=forms.TextInput(attrs={
+    'placeholder': 'شماره موبایل' ,
+    'class': 'form__input'
+}))
+	password = forms.CharField(widget=forms.PasswordInput(attrs={
+    'placeholder': 'گذرواژه' ,
+	'class': 'form__input'
+}))
