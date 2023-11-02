@@ -1,5 +1,10 @@
-
+import os
 from pathlib import Path
+
+#from bootstrap_toolkit.settings import *
+
+#BOOTSTRAP_TEMPLATE_PACK = 'bootstrap4'
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -35,6 +40,7 @@ INSTALLED_APPS = [
     'storages',
     'django_celery_beat',
     'ckeditor',
+    #'bootstrap_toolkit',
 ]
 
 MIDDLEWARE = [
@@ -122,7 +128,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'static'
+    BASE_DIR / 'static/'
 ]
 
 # Media files
